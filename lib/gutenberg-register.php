@@ -21,7 +21,7 @@ function scoutingimproved_acf_init() {
 }
 add_action('acf/init', 'scoutingimproved_acf_init');
 
-function scoutingimproved_acf_latest_news_block_render_callback() {
+function scoutingimproved_acf_latest_news_block_render_callback($block, $content = '', $is_preview = false ) {
 	$context               = Timber::get_context();
 	$context['block']      = $block;
 	$context['fields']     = get_fields();
