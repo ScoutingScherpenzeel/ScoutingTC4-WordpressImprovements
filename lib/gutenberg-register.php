@@ -19,6 +19,7 @@ function scoutingimproved_acf_init() {
 	);
 
 }
+add_action('acf/init', 'scoutingimproved_acf_init');
 
 function scoutingimproved_acf_latest_news_block_render_callback() {
 	$context               = Timber::get_context();
