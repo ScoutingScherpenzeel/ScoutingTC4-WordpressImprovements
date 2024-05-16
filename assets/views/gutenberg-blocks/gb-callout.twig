@@ -7,32 +7,34 @@
 #}
 
 {% if is_preview %}
+
 {% else %}
+
 {% endif %}
 
 <div id="gb-callout-{{ block.id }}" class="gb-callout">
-	<div class="container no-padding">
-		<div class="row no-gutters">
-			<div class="col">
-				<div class="callout">
-					<div class="beeld">
-						{% if 'ja' == fields.callout.eigen_beeld %}
-							<img alt="" class="img-fluid" src="{{ fields.callout.beeld.url }}" />
-						{% elseif 'nee' == fields.callout.eigen_beeld %}
-                            {% set theme_directory = function('get_template_directory_uri') %}
-							<img alt="" class="img-fluid" src="{{ theme_directory }}/assets/img/stijl/{{ fields.callout.beeldenlijst }}" />
-						{% endif %}
-					</div>
-					<div class="content">
-						<h5>{{ fields.callout.titel }}</h5>
-						{{ fields.callout.tekst }}
-						{% set knop = fields.callout.knop.knop %}
-						{% if knop.url %}
-							<a class="btn {{ knop.kleur }}" href="{{ knop.url.url }}">{{ knop.tekst }}</a>
-						{% endif %}
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+  <div class="container no-padding">
+    <div class="row no-gutters">
+      <div class="col">
+        <div class="callout">
+          <div class="beeld">
+            {% if 'ja' == fields.callout.eigen_beeld %}
+              <img alt="" class="img-fluid" src="{{ fields.callout.beeld.url }}" />
+            {% elseif 'nee' == fields.callout.eigen_beeld %}
+              {% set theme_directory = function('get_template_directory_uri') %}
+              <img alt="" class="img-fluid" src="{{ theme_directory }}/assets/img/stijl/{{ fields.callout.beeldenlijst }}" />
+            {% endif %}
+          </div>
+          <div class="content">
+            <h5>{{ fields.callout.titel }}</h5>
+            {{ fields.callout.tekst }}
+            {% set knop = fields.callout.knop.knop %}
+            {% if knop.url %}
+              <a class="btn {{ knop.kleur }}" href="{{ knop.url.url }}">{{ knop.tekst }}</a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
