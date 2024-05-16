@@ -1,6 +1,10 @@
 <?php
 
-remove_action( 'acf/init', 'scoutingnl_acf_init' );
+
+function remove_parent_acf_register() {
+    remove_action( 'acf/init', 'scoutingnl_acf_init' );
+}
+add_action('wp_loaded', 'remove_my_parent_theme_function');
 
 function scoutingimproved_acf_init() {
 
