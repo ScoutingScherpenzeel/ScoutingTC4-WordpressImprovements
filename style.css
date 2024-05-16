@@ -1,0 +1,89 @@
+/**
+ * Theme Name: Scouting Improvements
+ * Description: Improvements for the default Scouting TC4 template.
+ * Author: Melvin Snijders
+ * Author URI: https://github.com/MelvinSnijders
+ * Version: 1.0.0
+ * Template:   hansrochat-scouting-2020-7696afcbde3b
+ */
+
+ /* Fixes banner text width on mobile devices */
+#banner h1 {
+    max-width: 100%;
+    word-break: break-all;
+  }
+  
+  @media (max-width: 650px) {
+    #banner h1 {
+      max-width: 100%;
+      font-size: 3rem;
+    }
+  }
+  
+  /* Fixes form inputs not being styled properly */
+  .wpcf7 form input[type="number"],
+  .wpcf7 form input[type="date"] {
+    border: 1px solid #eee;
+    padding: 0.5rem;
+    width: 100%;
+  }
+  
+  .wpcf7 form select {
+    border: 1px solid #eee;
+    padding: 0.8rem 0.5rem;
+    width: 100%;
+    background-color: white;
+  }
+  
+  /* Makes the sidebar sticky and scroll with the page */
+  #sidebar {
+    position: sticky;
+    top: 100px;
+  }
+  
+  /* Fixes the width of the 404 page */
+  .niet-gevonden > h1 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  
+  @media (min-width: 576px) {
+    .niet-gevonden > h1 {
+      max-width: 540px;
+      padding: 0;
+    }
+  }
+  @media (min-width: 768px) {
+    .niet-gevonden > h1 {
+      max-width: 720px;
+      padding: 0;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .niet-gevonden > h1 {
+      max-width: 960px;
+      padding: 0;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .niet-gevonden > h1 {
+      max-width: 1140px;
+      padding: 0;
+    }
+  }
+  
+  @media only screen and (max-width: 1024px) {
+    .niet-gevonden > h1 {
+      padding: 0 1rem;
+    }
+  }
+  
+  /* Fix image center alignment */
+  .wp-block-image.aligncenter {
+    display: block !important;
+  }
