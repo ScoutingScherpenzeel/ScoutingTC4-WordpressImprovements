@@ -4,7 +4,7 @@
 function remove_parent_acf_register() {
     remove_action( 'acf/init', 'scoutingnl_acf_init' );
 }
-add_action('wp_loaded', 'remove_my_parent_theme_function');
+add_action('wp_loaded', 'remove_parent_acf_register');
 
 function scoutingimproved_acf_init() {
 
