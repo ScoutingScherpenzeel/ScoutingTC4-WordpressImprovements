@@ -33,7 +33,7 @@
                 {
                     "param": "block",
                     "operator": "==",
-                    "value": "acf\/news-block"
+                    "value": "acf\/latest-news-block"
                 }
             ]
         ],
