@@ -1,0 +1,49 @@
+{#
+/**
+ * Block Name: Gutenberg Block - Nieuwsitems
+ *
+ * Template to display a number of news items in a Gutenberg block
+ */
+#}
+
+{% if is_preview %}
+{% else %}
+{% endif %}
+
+{% set link = function( 'get_category_link', fields.titel[0].term_id ) %}
+{% set default_image_url = function('get_template_directory_uri') ~ '/path/to/default-image.jpg' %}
+
+<div class="container no-padding">
+	<div class="row no-gutters">
+		<div class="col">
+
+			<div id="gb-news-items-{{ block.id }}" class="gb-news-items">
+				<a href="{{ link }}" title="{{ fields.titel[0].name }}">
+					<h4>{{ fields.titel[0].name }}</h4>
+				</a>
+				<div class="news-items">
+					{% for item in featured %}
+						<div class="news-item">
+							<a class="titel" href="{{ function( 'get_permalink', item ) }}" title="">
+							 {% set thumbnail_url = function('get_the_post_thumbnail_url', item, 'medium') %}
+                                {% if not thumbnail_url %}
+                                    {% set thumbnail_url = default_image_url %}
+                                {% endif %}
+								<div class="beeld" style="background-image:url({{ thumbnail_url }});">
+									<span class="datum">{{ function( 'get_the_date', 'd F Y', item ) }}</span>
+								</div>
+								<h5>{{ function( 'get_the_title', item ) }}</h5>
+							</a>
+							<div class="tekst">
+								{{ function( 'scoutingnl_news_excerpt', item ) }}
+							</div>
+							<a class="lees-meer" href="{{ function( 'get_permalink', item ) }}" title="Lees meer">Lees meer</a>
+						</div>
+					{% endfor %}
+				</div>
+				<a class="meer-nieuws" href="{{ link }}" title="{{ fields.titel[0].name }}">Meer {{ fields.titel[0].name }}</a>
+			</div>
+
+		</div>
+	</div>
+</div>

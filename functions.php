@@ -17,3 +17,5 @@ function scouting_enqueue_styles()
 		array('bootstrap-style', 'font-awesome-5-style', 'poppins-google-fonts-style', 'roboto-google-fonts-style')
 	);
 }
+
+require_once 'lib/gutenberg-register.php';
