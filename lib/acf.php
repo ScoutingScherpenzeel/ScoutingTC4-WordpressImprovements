@@ -53,7 +53,7 @@ function scoutingimproved_acf_init()
 		array(
 			'name'            => 'latest_news_block',
 			'title'           => __('Laatste nieuws items', 'scoutingnl'),
-			'description'     => __('Gutenberg blok om de 3 laatste nieuwsitems in te voegen', 'scoutingnl'),
+			'description'     => __('Gutenberg blok om de laatste nieuwsitems in te voegen', 'scoutingnl'),
 			'render_callback' => 'scoutingimproved_acf_latest_news_block_render_callback',
 			'category'        => 'scouting-blocks',
 			'icon'            => 'screenoptions',
