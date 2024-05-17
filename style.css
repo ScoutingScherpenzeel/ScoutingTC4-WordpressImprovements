@@ -105,7 +105,7 @@
   transition: all 0.2s ease-in-out;
   font-size: 1rem;
   user-select: none;
-  display: inline-block;
+  display: inline-flex;
   border: 1px solid transparent;
 }
 
@@ -143,4 +143,8 @@
 
 .gb-btn-groen {
   background: #00a551;
+}
+
+.btn {
+  display: inline-flex !important;
 }
