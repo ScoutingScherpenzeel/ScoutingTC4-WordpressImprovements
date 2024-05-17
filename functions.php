@@ -18,4 +18,4 @@ function scouting_enqueue_styles()
 	);
 }
 
-require_once 'lib/gutenberg-register.php';
+require_once 'lib/acf.php';
