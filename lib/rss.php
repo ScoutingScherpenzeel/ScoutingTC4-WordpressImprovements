@@ -24,9 +24,17 @@ function scoutingimproved_rss_fixer($content)
     // Remove any trailing <br> tags
     $content = rtrim($content, '<br>');
 
+    // Fallback image URL
+    $fallback_image_url = get_stylesheet_directory_uri() . '/assets/img/news-placeholder.png';
+
     if (has_post_thumbnail($post->ID)) {
-        $content = get_the_post_thumbnail($post->ID) . $content;
+        $thumbnail_html = get_the_post_thumbnail($post->ID, 'medium');
+    } else {
+        $thumbnail_html = '<img src="' . esc_url($fallback_image_url) . '" alt="' . esc_attr(get_the_title($post->ID)) . '" />';
     }
+
+    // Add the image HTML before the content
+    $content = $thumbnail_html . $content;
 
     return $content;
 }
