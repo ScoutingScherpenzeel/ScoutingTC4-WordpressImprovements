@@ -10,7 +10,7 @@ Dit WordPress thema bevat verbeteringen voor het standaard Scouting Nederland Wo
 * De 404 niet gevonden pagina heeft juiste alignment.
 * Afbeeldingen kunnen gecentreerd worden.
 
-*Benieuwd hoe dit er uit ziet in het echt? Kijk op onze website: [https://scoutingscherpenzeel.nl/](https://scoutingscherpenzeel.nl/)
+*Benieuwd hoe dit er uit ziet in het echt? Kijk op onze website: [https://scoutingscherpenzeel.nl/]*(https://scoutingscherpenzeel.nl/)
 
 ## Installeren
 Het thema is een WordPress "child theme", dat betekent dat het overerft van het standaard Scouting thema.
