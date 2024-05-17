@@ -60,6 +60,18 @@ function scoutingimproved_acf_init()
 			'keywords'        => array('featured', 'blok', 'ankeiler', 'nieuws'),
 		)
 	);
+
+	acf_register_block(
+		array(
+			'name'            => 'button_block',
+			'title'           => __('Knop', 'scoutingnl'),
+			'description'     => __('Gutenberg blok om een knop in te voegen', 'scoutingnl'),
+			'render_callback' => 'scoutingimproved_acf_button_block_render_callback',
+			'category'        => 'scouting-blocks',
+			'icon'            => 'screenoptions',
+			'keywords'        => array('knop', 'button', 'block'),
+		)
+	);
 }
 
 function scoutingimproved_acf_latest_news_block_render_callback($block, $content = '', $is_preview = false)
@@ -77,4 +89,14 @@ function scoutingimproved_acf_latest_news_block_render_callback($block, $content
 	));
 
 	Timber::render('gutenberg-blocks/gb-latest-news-items.twig', $context);
+}
+
+function scoutingimproved_acf_button_block_render_callback($block, $content = '', $is_preview = false)
+{
+	$context               = Timber::get_context();
+	$context['block']      = $block;
+	$context['fields']     = get_fields();
+	$context['is_preview'] = $is_preview;
+
+	Timber::render('gutenberg-blocks/gb-button.twig', $context);
 }
