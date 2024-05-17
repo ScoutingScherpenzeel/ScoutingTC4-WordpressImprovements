@@ -92,7 +92,7 @@
 .gb-btn {
   align-items: center;
   border-radius: 50px;
-  color: white;
+  color: white !important;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   cursor: pointer;
   font-weight: 600;
@@ -107,6 +107,10 @@
   user-select: none;
   display: inline-block;
   border: 1px solid transparent;
+}
+
+.gb-btn:hover {
+  text-decoration: none !important;
 }
 
 .gb-btn::after {
@@ -124,11 +128,19 @@
 }
 
 .gb-btn:hover::after {
-  color: white;
+  color: white !important;
   margin-left: 30px;
   margin-right: -10px;
 }
 
 .gb-btn-blauw {
   background: #0066b2;
+}
+
+.gb-btn-zwart {
+  background: #000000;
+}
+
+.gb-btn-groen {
+  background: #00a551;
 }
