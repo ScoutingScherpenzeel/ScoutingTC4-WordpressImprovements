@@ -11,7 +11,7 @@
 {% endif %}
 
 {% set link = function( 'get_category_link', fields.titel[0].term_id ) %}
-{% set default_image_url = function('get_template_directory_uri') ~ '/assets/img/news-placeholder.png' %}
+{% set default_image_url = function('get_stylesheet_directory_uri') ~ '/assets/img/news-placeholder.png' %}
 
 <div class="container no-padding">
 	<div class="row no-gutters">
