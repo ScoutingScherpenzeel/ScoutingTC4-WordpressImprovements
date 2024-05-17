@@ -25,6 +25,28 @@
       "multiple": 0,
       "allow_null": 0,
       "bidirectional_target": []
+    },
+    {
+      "key": "field_66470b4df5936",
+      "label": "Aantal posts",
+      "name": "post_count",
+      "aria-label": "",
+      "type": "number",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": 3,
+      "min": 1,
+      "max": "",
+      "placeholder": "",
+      "step": 1,
+      "prepend": "",
+      "append": ""
     }
   ],
   "location": [
