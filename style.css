@@ -145,6 +145,12 @@
   background: #00a551;
 }
 
+/* Fix button arrow alignment */
+
 .btn {
+  display: inline-flex !important;
+}
+
+.meer-nieuws {
   display: inline-flex !important;
 }
