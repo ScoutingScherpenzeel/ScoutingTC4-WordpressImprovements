@@ -27,7 +27,7 @@
       "label": "URL",
       "name": "url",
       "aria-label": "",
-      "type": "url",
+      "type": "link",
       "instructions": "",
       "required": 0,
       "conditional_logic": 0,
@@ -36,8 +36,7 @@
         "class": "",
         "id": ""
       },
-      "default_value": "",
-      "placeholder": ""
+      "return_format": "array"
     },
     {
       "key": "field_6647475fb3bcc",
@@ -54,8 +53,9 @@
         "id": ""
       },
       "choices": {
-        "blauw: Blauw": "blauw: Blauw",
-        "zwart: Zwart": "zwart: Zwart"
+        "blauw": "Blauw",
+        "groen": "Groen",
+        "zwart": "Zwart"
       },
       "default_value": "blauw",
       "return_format": "value",
