@@ -1,8 +1,8 @@
 {#
 /**
- * Block Name: Gutenberg Block - Laatste nieuwsitems
+ * Block Name: Gutenberg Block - Nieuwsitems
  *
- * Template to display the latest news items in a Gutenberg block
+ * Template to display a number of news items in a Gutenberg block
  */
 #}
 
@@ -21,14 +21,14 @@
       <div id="gb-news-items-{{ block.id }}" class="gb-news-items">
         <a href="{{ link }}" title="{{ fields.titel[0].name }}"><h4>{{ fields.titel[0].name }}</h4></a>
         <div class="news-items">
-          {% for item in featured %}
+          {% for item in fields.news_items %}
             <div class="news-item">
               <a class="titel" href="{{ function('get_permalink', item) }}" title="">
                 {% set thumbnail_url = function('get_the_post_thumbnail_url', item, 'medium') %}
                 {% if not thumbnail_url %}
                   {% set thumbnail_url = default_image_url %}
                 {% endif %}
-                <div class="beeld" style="background-image:url({{ thumbnail_url }});">
+                <div class="beeld" style="background-image:url({{ thumbnail_url }};">
                   <span class="datum">{{ function('get_the_date', 'd F Y', item) }}</span>
                 </div>
                 <h5>{{ function('get_the_title', item) }}</h5>
