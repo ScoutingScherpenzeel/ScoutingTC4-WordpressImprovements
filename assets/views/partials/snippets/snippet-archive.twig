@@ -1,4 +1,4 @@
-{% set fallback_image_url = function('get_template_directory_uri') ~ '/assets/img/news-placeholder.png' %}
+{% set fallback_image_url = function('get_stylesheet_directory_uri') ~ '/assets/img/news-placeholder.png' %}
 
 <div class="item item-archive">
   {% set thumbnail_url = post.thumbnail.src('medium') %}
