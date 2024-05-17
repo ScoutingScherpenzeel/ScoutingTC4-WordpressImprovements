@@ -87,3 +87,48 @@
 .wp-block-image.aligncenter {
   display: block !important;
 }
+
+/* New gutenberg buttons */
+.gb-btn {
+  align-items: center;
+  border-radius: 50px;
+  color: white;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  font-weight: 600;
+  line-height: 1.2em;
+  margin: 0;
+  padding: 12px 30px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+  font-size: 1rem;
+  user-select: none;
+  display: inline-block;
+  border: 1px solid transparent;
+}
+
+.gb-btn::after {
+  border-style: solid;
+  border-width: 2px 2px 0 0;
+  content: '';
+  display: inline-block;
+  height: 0.8em;
+  margin-left: 20px;
+  position: relative;
+  transform: rotate(45deg);
+  transition: all 0.3s ease;
+  vertical-align: top;
+  width: 0.8em;
+}
+
+.gb-btn:hover::after {
+  color: white;
+  margin-left: 30px;
+  margin-right: -10px;
+}
+
+.gb-btn-blauw {
+  background: #0066b2;
+}
