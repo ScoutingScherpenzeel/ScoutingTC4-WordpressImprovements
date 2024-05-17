@@ -5,7 +5,6 @@
  * ACF: ACF JSON location
  */
 
-add_filter('acf/settings/save_json', 'scoutingimproved_acf_json_save_point');
 function scoutingimproved_acf_json_save_point($path)
 {
 
@@ -14,7 +13,6 @@ function scoutingimproved_acf_json_save_point($path)
 }
 
 
-add_filter('acf/settings/load_json', 'scoutingimproved_acf_json_load_point');
 function scoutingimproved_acf_json_load_point($paths)
 {
 
@@ -29,6 +27,19 @@ function scoutingimproved_acf_json_load_point($paths)
 
 	return $paths;
 }
+
+/**
+ * Ensure ACF JSON paths are correctly set for both parent and child themes.
+ */
+add_action( 'after_setup_theme', 'scoutingimproved_modify_acf_json_paths' );
+function scoutingimproved_modify_acf_json_paths() {
+    // Save ACF JSON in the child theme directory
+    add_filter( 'acf/settings/save_json', 'scoutingimproved_acf_json_save_point' );
+
+    // Add the child theme's acf-json path to the load paths
+    add_filter( 'acf/settings/load_json', 'scoutingimproved_acf_json_load_point' );
+}
+
 
 add_action('acf/init', 'scoutingimproved_acf_init');
 function scoutingimproved_acf_init()
