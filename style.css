@@ -116,7 +116,7 @@
 .gb-btn::after {
   border-style: solid;
   border-width: 2px 2px 0 0;
-  content: '';
+  content: "";
   display: inline-block;
   height: 0.8em;
   margin-left: 20px;
@@ -146,11 +146,16 @@
 }
 
 /* Fix button arrow alignment */
-
 .btn {
   display: inline-flex !important;
 }
 
 .meer-nieuws {
   display: inline-flex !important;
+}
+
+/* Hide reCAPTCHA badge */
+
+.grecaptcha-badge {
+  visibility: hidden;
 }
