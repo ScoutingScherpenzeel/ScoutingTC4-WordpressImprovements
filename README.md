@@ -11,6 +11,7 @@ Dit WordPress thema bevat verbeteringen voor het standaard Scouting Nederland Wo
 * Afbeeldingen kunnen gecentreerd worden.
 * Juiste alignment van pijltje bij knoppen.
 * Een nieuw Gutenberg blok voor een eigen knop.
+* Verbergt de reCAPTCHA v3 badge als dit wordt gebruikt voor formulieren.
 
 *Benieuwd hoe dit er uit ziet in het echt? Kijk op onze website: [https://scoutingscherpenzeel.nl/](https://scoutingscherpenzeel.nl/)*
 
