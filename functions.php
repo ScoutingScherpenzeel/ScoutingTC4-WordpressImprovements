@@ -1,6 +1,7 @@
 <?php
 
 add_action('wp_enqueue_scripts', 'scouting_enqueue_styles');
+add_action('wp_enqueue_scripts', 'scouting_enqueue_scripts');
 
 function scouting_enqueue_styles()
 {
@@ -16,6 +17,10 @@ function scouting_enqueue_styles()
 		get_parent_theme_file_uri('style.css'),
 		array('bootstrap-style', 'font-awesome-5-style', 'poppins-google-fonts-style', 'roboto-google-fonts-style')
 	);
+}
+
+function scouting_enqueue_scripts() {
+	wp_enqueue_script('animation', get_stylesheet_directory_uri() . '/assets/js/animation.js', array('jquery'), '1.3.1', true); 
 }
 
 require_once 'lib/acf.php';
