@@ -9,14 +9,14 @@
 
 /* Fixes banner text width on mobile devices */
 #banner h1 {
-  max-width: 100%;
-  word-break: break-all;
+  max-width: 100% !important;
+  word-break: break-all !important;
 }
 
 @media (max-width: 650px) {
   #banner h1 {
-    max-width: 100%;
-    font-size: 3rem;
+    max-width: 100% !important;
+    font-size: 3rem !important;
   }
 }
 
