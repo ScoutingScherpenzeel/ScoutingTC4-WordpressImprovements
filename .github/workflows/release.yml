@@ -23,3 +23,4 @@ jobs:
         with:
           artifacts: 'scouting-improvements-child-${{ github.ref_name }}.zip'
           token: ${{ secrets.GITHUB_TOKEN }}
+          allowUpdates: true
