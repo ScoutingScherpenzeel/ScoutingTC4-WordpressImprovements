@@ -8,7 +8,10 @@ $.fn.isInViewport = function() {
     return elementBottom > viewportTop && elementTop < viewportBottom;
 };
 
-$(window).on('load resize scroll', function() {
+$(window).on('resize scroll', checkElements);
+$(document).ready(checkElements);
+
+function checkElements() {
     const classLists = ["news-item", "gb-callout", "item-archive", "featured-item"];
     classLists.forEach(function(classList) {
         $('.' + classList).each(function() {
@@ -17,4 +20,4 @@ $(window).on('load resize scroll', function() {
             }
         });
     });
-});
+}
