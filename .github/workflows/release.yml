@@ -18,9 +18,8 @@ jobs:
           type: 'zip'
           filename: 'scouting-improvements-child-${{ github.ref_name }}.zip'
 
-      - name: Upload Release
-        uses: ncipollo/release-action@v1.12.0
-        with:
-          artifacts: 'scouting-improvements-child-${{ github.ref_name }}.zip'
-          token: ${{ secrets.GITHUB_TOKEN }}
-          allowUpdates: true
+      - name: Upload Release Asset
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run:
+          'gh release upload ${{ github.ref_name }} scouting-improvements-child-${{ github.ref_name }}.zip'
