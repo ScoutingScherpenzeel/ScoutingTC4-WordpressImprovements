@@ -1,0 +1,38 @@
+<div class="butterfly__container">
+  <div class="butterfly__wrapper">
+    <div class="butterfly">
+      <div class="wing">
+        <div class="bit"></div>
+        <div class="bit"></div>
+      </div>
+      <div class="wing">
+        <div class="bit"></div>
+        <div class="bit"></div>
+      </div>
+    </div>
+    <div class="shadow"></div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-lg-6">
+      {% if options.social_media_bronnen %}
+        <div id="social-media">
+          <h5>{{ options.social_media_bronnen_kop }}</h5>
+          <ul>
+            {% for bron in options.social_media_bronnen %}
+              <li>
+                <a title="Bekijk ons op {{ bron.naam }}" href="{{ bron.url }}"><i class="{{ bron.ico }}"></i></a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+        <p id="copyright">{{ options.copyright }}</p>
+      {% endif %}
+    </div>
+    <div class="col-12 col-lg-6">
+      {% set footer_widget_r = function('dynamic_sidebar', 'footer-widgetarea') %}
+    </div>
+  </div>asdasd
+</div>

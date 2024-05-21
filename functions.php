@@ -10,6 +10,10 @@ function scouting_enqueue_styles()
 		'scouting-improved-style',
 		get_stylesheet_uri()
 	);
+	wp_enqueue_style(
+		'scouting-butterfly-style',
+		get_template_directory_uri() . '/assets/css/butterfly.css'
+	)
 
 	// Load all CSS of the default Scouting template
 	wp_enqueue_style(
