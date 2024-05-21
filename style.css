@@ -95,7 +95,7 @@
 }
 
 /* New gutenberg buttons */
-.gb-btn {
+.gb-btn, .wp-block-file__button {
   align-items: center;
   border-radius: 50px;
   color: white !important;
@@ -115,11 +115,11 @@
   border: 1px solid transparent;
 }
 
-.gb-btn:hover {
+.gb-btn:hover, .wp-block-file__button:hover {
   text-decoration: none !important;
 }
 
-.gb-btn::after {
+.gb-btn::after, .wp-block-file__button::after {
   border-style: solid;
   border-width: 2px 2px 0 0;
   content: "";
@@ -133,13 +133,13 @@
   width: 0.8em;
 }
 
-.gb-btn:hover::after {
+.gb-btn:hover::after, .wp-block-file__button:hover::after {
   color: white !important;
   margin-left: 30px;
   margin-right: -10px;
 }
 
-.gb-btn-blauw {
+.gb-btn-blauw, .wp-block-file__button {
   background: #0066b2;
 }
 
