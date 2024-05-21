@@ -11,6 +11,7 @@ Dit WordPress thema bevat verbeteringen voor het standaard Scouting Nederland Wo
 * Afbeeldingen kunnen gecentreerd worden.
 * Juiste alignment van pijltje bij knoppen.
 * Een nieuw Gutenberg blok voor een eigen knop.
+* Downloadknop bij een bestand heeft juiste stijl.
 * Verbergt de reCAPTCHA v3 badge als dit wordt gebruikt voor formulieren.
 * Animaties vergelijkbaar met die van de Scouting Nederland website.
 
