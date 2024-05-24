@@ -15,6 +15,7 @@ Dit WordPress thema bevat verbeteringen voor het standaard Scouting Nederland Wo
 * Verbergt de reCAPTCHA v3 badge als dit wordt gebruikt voor formulieren.
 * Animaties vergelijkbaar met die van de Scouting Nederland website.
 * De originele vlinder in de footer op de Scouting Nederland website is toegevoegd.
+* Betere breadcrumbs, in lijn met Scouting Nederland.
 
 *Benieuwd hoe dit er uit ziet in het echt? Kijk op onze website: [https://scoutingscherpenzeel.nl/](https://scoutingscherpenzeel.nl/)*
 
