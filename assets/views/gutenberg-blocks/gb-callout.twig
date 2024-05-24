@@ -21,8 +21,13 @@
             {% if 'ja' == fields.callout.eigen_beeld %}
               <img alt="" class="img-fluid" src="{{ fields.callout.beeld.url }}" />
             {% elseif 'nee' == fields.callout.eigen_beeld %}
-              {% set theme_directory = function('get_template_directory_uri') %}
-              <img alt="" class="img-fluid" src="{{ theme_directory }}/assets/img/stijl/{{ fields.callout.beeldenlijst }}" />
+              {% set child_theme_directory = function('get_stylesheet_directory') %}
+              {% set parent_theme_directory = function('get_template_directory') %}
+              {% set child_theme_image_path = child_theme_directory ~ '/assets/img/stijl/' ~ fields.callout.beeldenlijst %}
+              {% set parent_theme_image_path = parent_theme_directory ~ '/assets/img/stijl/' ~ fields.callout.beeldenlijst %}
+              {% set image_path = file_exists(child_theme_image_path) ? child_theme_image_path : parent_theme_image_path %}
+              {% set image_url = file_exists(child_theme_image_path) ? function('get_stylesheet_directory_uri') ~ '/assets/img/stijl/' ~ fields.callout.beeldenlijst : function('get_template_directory_uri') ~ '/assets/img/stijl/' ~ fields.callout.beeldenlijst %}
+              <img alt="" class="img-fluid" src="{{ image_url }}" />
             {% endif %}
           </div>
           <div class="content">

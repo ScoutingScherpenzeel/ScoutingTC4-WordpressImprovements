@@ -27,5 +27,13 @@ function scouting_enqueue_scripts() {
 	wp_enqueue_script('animation', get_stylesheet_directory_uri() . '/assets/js/animation.js', array('jquery'), '1.5.0', true); 
 }
 
+function add_twig_file_exists_extension($twig) {
+    $twig->addFunction(new \Twig\TwigFunction('file_exists', function ($path) {
+        return file_exists($path);
+    }));
+    return $twig;
+}
+add_filter('timber/twig', 'add_twig_file_exists_extension');
+
 require_once 'lib/acf.php';
 require_once 'lib/rss.php';
