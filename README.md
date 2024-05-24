@@ -16,6 +16,7 @@ Dit WordPress thema bevat verbeteringen voor het standaard Scouting Nederland Wo
 * Animaties vergelijkbaar met die van de Scouting Nederland website.
 * De originele vlinder in de footer op de Scouting Nederland website is toegevoegd.
 * Betere breadcrumbs, in lijn met Scouting Nederland.
+* Kompas plaatje vervangen met die van Scouting Nederland.
 
 *Benieuwd hoe dit er uit ziet in het echt? Kijk op onze website: [https://scoutingscherpenzeel.nl/](https://scoutingscherpenzeel.nl/)*
 
