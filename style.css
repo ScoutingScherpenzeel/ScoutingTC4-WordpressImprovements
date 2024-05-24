@@ -177,3 +177,22 @@
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Better breadcrumbs */
+#breadcrumbs {
+  color: #696966;
+  margin: 0 0 3rem !important;
+}
+
+#breadcrumbs a {
+  color: #696966 !important;
+}
+
+.breadcrumb_last, #breadcrumbs a {
+  font-size: .875rem !important;
+}
+
+#breadcrumbs > span {
+  display: flex;
+  gap: 10px
+}
