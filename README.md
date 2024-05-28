@@ -5,7 +5,7 @@ Dit WordPress thema bevat verbeteringen voor het standaard Scouting Nederland Wo
 * Fallback "featured image" voor posts zonder plaatje.
 * Een nieuw Gutenberg blok om de laatste nieuwsitems te laten zien.
 * De tekst in de banners breekt op juiste momenten (niet midden in een woord) en schaalt beter op telefoons.
-* Form inputs hebben zoals nummer, datum en select hebben ook correcte styling.
+* Form inputs zoals nummer, datum en select hebben ook correcte styling.
 * De sidebar op pagina's is sticky, en scrollt dus mee met de pagina.
 * De 404 niet gevonden pagina heeft juiste alignment.
 * Afbeeldingen kunnen gecentreerd worden.
@@ -18,7 +18,7 @@ Dit WordPress thema bevat verbeteringen voor het standaard Scouting Nederland Wo
 * Betere breadcrumbs, in lijn met Scouting Nederland.
 * Kompas plaatje vervangen met die van Scouting Nederland.
 
-*Benieuwd hoe dit er uit ziet in het echt? Kijk op onze website: [https://scoutingscherpenzeel.nl/](https://scoutingscherpenzeel.nl/)*
+*Benieuwd hoe dit er uit ziet in het echt? Kijk op onze website: [https://scoutingscherpenzeel.nl/](https://nieuw.scoutingscherpenzeel.nl/)*
 
 ## Installeren
 Het thema is een WordPress "child theme", dat betekent dat het overerft van het standaard Scouting thema.
