@@ -24,7 +24,7 @@ function scouting_enqueue_styles()
 }
 
 function scouting_enqueue_scripts() {
-	wp_enqueue_script('animation', get_stylesheet_directory_uri() . '/assets/js/animation.js', array('jquery'), '1.5.3', true); 
+	wp_enqueue_script('animation', get_stylesheet_directory_uri() . '/assets/js/animation.js', array('jquery'), '1.5.4', true); 
 }
 
 function add_twig_file_exists_extension($twig) {
