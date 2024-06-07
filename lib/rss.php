@@ -28,7 +28,7 @@ function scoutingimproved_rss_fixer($content)
     $fallback_image_url = get_stylesheet_directory_uri() . '/assets/img/news-placeholder.png';
 
     if (has_post_thumbnail($post->ID)) {
-        $thumbnail_html = get_the_post_thumbnail($post->ID, 'medium');
+        $thumbnail_html = get_the_post_thumbnail($post->ID, 'full');
     } else {
         $thumbnail_html = '<img src="' . esc_url($fallback_image_url) . '" alt="' . esc_attr(get_the_title($post->ID)) . '" />';
     }
