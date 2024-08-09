@@ -25,10 +25,10 @@
   }
 }
 
-
 /* Fixes form inputs not being styled properly */
 .wpcf7 form input[type="number"],
-.wpcf7 form input[type="date"] {
+.wpcf7 form input[type="date"],
+.wpcf7 form input[type="time"] {
   border: 1px solid #eee;
   padding: 0.5rem;
   width: 100%;
@@ -95,7 +95,8 @@
 }
 
 /* New gutenberg buttons */
-.gb-btn, .wp-block-file__button {
+.gb-btn,
+.wp-block-file__button {
   align-items: center;
   border-radius: 50px;
   color: white !important;
@@ -115,11 +116,13 @@
   border: 1px solid transparent;
 }
 
-.gb-btn:hover, .wp-block-file__button:hover {
+.gb-btn:hover,
+.wp-block-file__button:hover {
   text-decoration: none !important;
 }
 
-.gb-btn::after, .wp-block-file__button::after {
+.gb-btn::after,
+.wp-block-file__button::after {
   border-style: solid;
   border-width: 2px 2px 0 0;
   content: "";
@@ -133,13 +136,15 @@
   width: 0.8em;
 }
 
-.gb-btn:hover::after, .wp-block-file__button:hover::after {
+.gb-btn:hover::after,
+.wp-block-file__button:hover::after {
   color: white !important;
   margin-left: 30px;
   margin-right: -10px;
 }
 
-.gb-btn-blauw, .wp-block-file__button {
+.gb-btn-blauw,
+.wp-block-file__button {
   background: #0066b2;
 }
 
@@ -167,7 +172,10 @@
 }
 
 /* Animations! */
-.news-item, .gb-callout, .item-archive, .featured-item {
+.news-item,
+.gb-callout,
+.item-archive,
+.featured-item {
   opacity: 0;
   transition: all 1.5s;
   transform: translateY(20px);
@@ -188,11 +196,12 @@
   color: #696966 !important;
 }
 
-.breadcrumb_last, #breadcrumbs a {
-  font-size: .875rem !important;
+.breadcrumb_last,
+#breadcrumbs a {
+  font-size: 0.875rem !important;
 }
 
 #breadcrumbs > span {
   display: flex;
-  gap: 10px
+  gap: 10px;
 }
