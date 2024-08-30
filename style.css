@@ -156,6 +156,27 @@
   background: #00a551;
 }
 
+@media (min-width: 1200px) {
+  .gb-btn {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 992px) {
+  .gb-btn {
+    max-width: 960px;
+  }
+}
+@media (min-width: 768px) {
+  .gb-btn {
+    max-width: 720px;
+  }
+}
+@media (min-width: 576px) {
+  .gb-btn {
+    max-width: 540px;
+  }
+}
+
 /* Fix button arrow alignment */
 .btn {
   display: inline-flex !important;
