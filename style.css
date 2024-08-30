@@ -3,7 +3,7 @@
  * Description: Verbeteringen voor het Scouting TC4 thema.
  * Author: Melvin Snijders
  * Author URI: https://github.com/ScoutingScherpenzeel/ScoutingTC4-WordpressImprovements
- * Version: 1.6.1
+ * Version: 1.6.0
  * Template: hansrochat-scouting-2020-7696afcbde3b
  */
 
@@ -154,27 +154,6 @@
 
 .gb-btn-groen {
   background: #00a551;
-}
-
-@media (min-width: 1200px) {
-  .gb-btn {
-    max-width: 1140px;
-  }
-}
-@media (min-width: 992px) {
-  .gb-btn {
-    max-width: 960px;
-  }
-}
-@media (min-width: 768px) {
-  .gb-btn {
-    max-width: 720px;
-  }
-}
-@media (min-width: 576px) {
-  .gb-btn {
-    max-width: 540px;
-  }
 }
 
 /* Fix button arrow alignment */
