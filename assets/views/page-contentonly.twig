@@ -1,0 +1,56 @@
+{% set menu_type = options.menu_type %}
+	{% set color_primary = options.hoofdkleur %}
+	{% set color_secundary = options.steunkleur %}
+
+{% include 'html-header.twig' %}
+	<body class="{{ body_class }} {{ extra_body_class }} {{ color_primary }} {{ color_secundary }}" data-template="base.twig">
+		<div id="grid">
+			{% if 'menu-top' == menu_type %}
+				<div id="header" class="{{ menu_type }}">
+					{% set logo_bg = options.achtergrond_logo_tonen %}
+					{% set style_logo_bg = ( 1 == logo_bg ) ? 'has-bg' : 'no-bg' %}				
+					<div id="container-logo" class="{{ style_logo_bg }}">
+						<a title="{{ site.name}} {{ site.description }}" href="{{ site.link }}">
+							<img alt="" class="img-fluid" src="{{ options.logo.url }}" />
+						</a>
+					</div>
+				</div>
+			{% else %}
+				<div id="header" class="container no-padding {{ menu_type }}">
+					<div id="container-logo">
+						<a title="{{ site.name}} {{ site.description }}" href="{{ site.link }}">
+							<img alt="" class="img-fluid" src="{{ options.logo.url }}" />
+						</a>
+					</div>
+				</div>				
+			{% endif %}
+			{% if 1 == function( 'is_front_page' ) %}
+				{% include 'partials/slider.twig' %}
+			{% else %}
+				{% set is_cat = function( 'is_category' ) %}
+				{% set heeft_banner = ( ( '' != banner.type and 1 == banner.banner_tonen ) or 1 == is_cat  ) ? 'has-banner' : 'no-banner' %}
+				{% include 'partials/banner.twig' with { 'is_cat': is_cat, 'heeft_banner': heeft_banner } %}
+			{% endif %}
+			<div id="main" class="{{ heeft_banner }} content-only">
+				
+<div id="container-page" class="page">
+		<div class="container no-padding">
+			<h1 class="titel">{{ post.title }}</h1>
+		</div>
+		<div class="item-beeld">
+			{% if post.thumbnail %}
+			    <img alt="" class="img-fluid" src="{{ post.thumbnail( 'large' ) }}" />
+			{% endif %}
+		</div>
+		<div class="item-content">
+			{{ post.content }}
+		</div>
+	</div>
+			</div>
+			<div id="footer">
+				{% include 'footer.twig' %}
+				{{ function( 'wp_footer' ) }}
+			</div>
+		</div>
+	</body>
+</html>
