@@ -1,0 +1,22 @@
+{% set menu_type = options.menu_type %}
+	{% set color_primary = options.hoofdkleur %}
+	{% set color_secundary = options.steunkleur %}
+
+{% include 'html-header.twig' %}
+	<body class="{{ body_class }} {{ extra_body_class }} {{ color_primary }} {{ color_secundary }}" data-template="base.twig">
+		<div>
+			<div id="main" class="{{ heeft_banner }} content-empty">
+				
+<div id="container-page" class="page">
+		<div class="container no-padding">
+			<h1 class="titel">{{ post.title }}</h1>
+		</div>
+		<div class="item-content">
+			{{ post.content }}
+		</div>
+	</div>
+			</div>
+		</div>
+			{{ function( 'wp_footer' ) }}
+	</body>
+</html>

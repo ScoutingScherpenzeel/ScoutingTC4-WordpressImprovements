@@ -16,6 +16,15 @@
   padding: 0;
 }
 
+/* Specific bugfix for CF7 forms on content only pages */
+.content-only .wpcf7-submit {
+  float: left !important;
+}
+
+.content-only .wpcf7 {
+  padding-bottom: 4.5rem !important;
+}
+
 /* Fixes banner text width on mobile devices */
 #banner h1 {
   max-width: 100% !important;
