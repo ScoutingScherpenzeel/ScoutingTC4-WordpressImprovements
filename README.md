@@ -29,6 +29,11 @@ Het thema is een WordPress "child theme", dat betekent dat het overerft van het 
 3. Upload het .zip bestand naar je website.
 4. Activeer het thema, en je bent klaar!
 
+## RSS feed
+De RSS feed vanuit je website naar de Scouting app is niet heel stabiel gebleken. Vooral de weergave van media gaat nog wel eens kapot binnen de Scouting app.
+Ik kan dan ook aanraden om niet berichten van je website naar de app te pushen, maar andersom. Via het appbeheer kun je "Uitsluiten van RSS" aanvinken om je bericht niet op de website te laten plaatsen als je dit niet wilt.
+Er zijn verschillende plugins beschikbaar om je RSS feeds vanuit de Scouting app te importeren als post op je website.
+
 ## Bijdragen
 Heb jij ook een verbetering gemaakt op het standaard thema? Maak dan gerust een PR op deze repository.
 Wil je een verbetering, maar weet je niet hoe? Maak dan een issue, dan kan iemand anders dit misschien maken!
