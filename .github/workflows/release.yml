@@ -2,25 +2,47 @@ name: Create Archive
 
 on:
   release:
-    types: [created]
+    types: [published]
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      THEME_SLUG: scouting-improvements-child
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
+
+        # Set version in style.css
+      - name: Sync style.css Version with tag
+        run: |
+          VERSION="${GITHUB_REF_NAME#v}"
+          if [ -f style.css ]; then
+            sed -i -E "s/^Version:\s*.*/Version: ${VERSION}/" style.css || true
+          fi
+
+      - name: Move files into wrapper folder (all files)
+        shell: bash
+        run: |
+          set -euo pipefail
+          shopt -s dotglob extglob
+          mkdir -p "${THEME_SLUG}"
+          mv !( "${THEME_SLUG}" ) "${THEME_SLUG}"/
 
       - name: Archive Release
         uses: thedoctor0/zip-release@0.7.5
         with:
           type: 'zip'
-          filename: 'scouting-improvements-child.zip'
-          exclusions: '*.git* *.github* .gitignore'
+          path: ${{ env.THEME_SLUG }}
+          filename: ${{ env.THEME_SLUG }}-${{ github.ref_name }}.zip
+          exclusions: |
+            **/.git*
+            **/.github*
+            **/*.zip
 
       - name: Upload Release Asset
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run:
-          'gh release upload ${{ github.ref_name }} scouting-improvements-child.zip'
+          'gh release upload "${{ github.ref_name }}" "${{ env.THEME_SLUG }}-${{ github.ref_name }}.zip" --clobber'
