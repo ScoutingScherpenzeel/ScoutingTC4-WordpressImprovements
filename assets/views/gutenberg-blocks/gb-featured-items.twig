@@ -1,0 +1,44 @@
+{#
+/**
+ * Block Name: Gutenberg Block - Featured items
+ *
+ * Template to display a number of featured items in a Gutenberg block
+ */
+#}
+
+{% if is_preview %}
+{% else %}
+{% endif %}
+
+<div class="container no-padding">
+	<div class="row no-gutters">
+		<div class="col">
+			{% if 0 < fields.kop | length %}
+				<h4>{{ fields.kop }}</h4>
+			{% endif %}
+			<div id="gb-featured-items-{{ block.id }}" class="gb-featured-items">
+				{% for item in fields.featured_items %}
+					<div class="featured-item">
+						{% if item.knop.url %}
+							<a href="{{ item.knop.url.url }}" title="">
+								<h5>{{ item.kop }}</h5>
+							</a>
+						{% else %}
+							<h5>{{ item.kop }}</h5>
+						{% endif %}
+						<div class="beeld" style="background-image:url({{ item.beeld.url }});">
+						</div>
+						<div class="tekst">
+							{{ item.tekst }}
+						</div>
+						{% if item.knop.url %}
+							<div>
+								<a class="gb-btn gb-btn-{{ item.knop.kleur }}" href="{{ item.knop.url.url }}" title="Meer lezen">{{ item.knop.tekst }}</a>
+							</div>
+						{% endif %}
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</div>

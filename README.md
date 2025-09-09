@@ -17,8 +17,9 @@ Dit WordPress thema bevat verbeteringen voor het standaard Scouting Nederland Wo
 * De originele vlinder in de footer op de Scouting Nederland website is toegevoegd.
 * Betere breadcrumbs, in lijn met Scouting Nederland.
 * Kompas plaatje vervangen met die van Scouting Nederland.
-* Extra page template voor het tonen van alleen content op een pagina (verbergt navigatie en breadcrumbs)
-* Extra page template voor het tonen van alleen content zonder header/footers
+* Extra page template voor het tonen van alleen content op een pagina (verbergt navigatie en breadcrumbs).
+* Extra page template voor het tonen van alleen content zonder header/footers.
+* De knop van de "featured items" is nu daadwerkelijk de gekozen kleur, in plaats van altijd blauw.
 
 *Benieuwd hoe dit er uit ziet in het echt? Kijk op onze website: [https://scoutingscherpenzeel.nl/](https://nieuw.scoutingscherpenzeel.nl/)*
 
@@ -32,6 +33,7 @@ Het thema is een WordPress "child theme", dat betekent dat het overerft van het 
 ## RSS feed
 De RSS feed vanuit je website naar de Scouting app is niet heel stabiel gebleken. Vooral de weergave van media gaat nog wel eens kapot binnen de Scouting app.
 Ik kan dan ook aanraden om niet berichten van je website naar de app te pushen, maar andersom. Via het appbeheer kun je "Uitsluiten van RSS" aanvinken om je bericht niet op de website te laten plaatsen als je dit niet wilt.
+
 Er zijn verschillende plugins beschikbaar om je RSS feeds vanuit de Scouting app te importeren als post op je website.
 
 ## Bijdragen
