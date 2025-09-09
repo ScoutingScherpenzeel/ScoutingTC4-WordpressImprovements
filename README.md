@@ -20,6 +20,7 @@ Dit WordPress thema bevat verbeteringen voor het standaard Scouting Nederland Wo
 * Extra page template voor het tonen van alleen content op een pagina (verbergt navigatie en breadcrumbs).
 * Extra page template voor het tonen van alleen content zonder header/footers.
 * De knop van de "featured items" is nu daadwerkelijk de gekozen kleur, in plaats van altijd blauw.
+* Automatische updates van dit extra thema.
 
 *Benieuwd hoe dit er uit ziet in het echt? Kijk op onze website: [https://scoutingscherpenzeel.nl/](https://nieuw.scoutingscherpenzeel.nl/)*
 

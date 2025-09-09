@@ -1,5 +1,7 @@
 <?php
 
+require_once get_stylesheet_directory() . '/lib/updater.php';
+
 add_action('wp_enqueue_scripts', 'scouting_enqueue_styles');
 add_action('wp_enqueue_scripts', 'scouting_enqueue_scripts');
 
