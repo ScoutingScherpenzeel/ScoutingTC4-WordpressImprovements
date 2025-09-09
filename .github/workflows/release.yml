@@ -28,7 +28,7 @@ jobs:
           set -euo pipefail
           shopt -s dotglob extglob
           mkdir -p "${THEME_SLUG}"
-          mv !(${THEME_SLUG}) "${THEME_SLUG}"/
+          mv -- !(.git|.github|${THEME_SLUG}) "${THEME_SLUG}/"
 
       - name: Archive Release
         uses: thedoctor0/zip-release@0.7.5
