@@ -17,9 +17,15 @@ jobs:
         # Set version in style.css
       - name: Sync style.css Version with tag
         run: |
+          set -euo pipefail
           VERSION="${GITHUB_REF_NAME#v}"
-          if [ -f style.css ]; then
-            sed -i -E "s/^Version:\s*.*/Version: ${VERSION}/" style.css || true
+          FILE="style.css"
+          if [ -f "$FILE" ]; then
+            sed -i -E "s/^[[:space:]]*\*?[[:space:]]*Version:[[:space:]]*.*/ * Version: ${VERSION}/" "$FILE"
+            echo "Updated version to ${VERSION}:"
+            grep -n "Version:" "$FILE"
+          else
+            echo "No $FILE found"
           fi
 
       - name: Move files into wrapper folder
