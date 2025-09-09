@@ -22,13 +22,13 @@ jobs:
             sed -i -E "s/^Version:\s*.*/Version: ${VERSION}/" style.css || true
           fi
 
-      - name: Move files into wrapper folder (all files)
+      - name: Move files into wrapper folder
         shell: bash
         run: |
           set -euo pipefail
           shopt -s dotglob extglob
           mkdir -p "${THEME_SLUG}"
-          mv !( "${THEME_SLUG}" ) "${THEME_SLUG}"/
+          mv !(${THEME_SLUG}) "${THEME_SLUG}"/
 
       - name: Archive Release
         uses: thedoctor0/zip-release@0.7.5
