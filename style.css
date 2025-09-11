@@ -291,6 +291,11 @@
   border: 1px solid #ccc;
 }
 
+.wpcf7 form input[type='file'] {
+  width: 100%;
+  background-color: white;
+}
+
 .wpcf7 form input[type='file']::-webkit-file-upload-button {
   padding: 8px 15px;
   border: none;
