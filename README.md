@@ -5,7 +5,7 @@ Dit WordPress thema bevat verbeteringen voor het standaard Scouting Nederland Wo
 * Fallback "featured image" voor posts zonder plaatje.
 * Een nieuw Gutenberg blok om de laatste nieuwsitems te laten zien.
 * De tekst in de banners breekt op juiste momenten (niet midden in een woord) en schaalt beter op telefoons.
-* Form inputs zoals nummer, datum en select hebben ook correcte styling.
+* Form inputs zoals nummer, datum en select hebben ook correcte styling. Overige form inputs zijn gelijk getrokken met Scouting Nederland.
 * De sidebar op pagina's is sticky, en scrollt dus mee met de pagina.
 * De 404 niet gevonden pagina heeft juiste alignment.
 * Afbeeldingen kunnen gecentreerd worden.

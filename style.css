@@ -16,13 +16,8 @@
   padding: 0;
 }
 
-/* Specific bugfix for CF7 forms on content only pages */
-.content-only .wpcf7-submit {
-  float: left !important;
-}
-
-.content-only .wpcf7 {
-  padding-bottom: 4.5rem !important;
+#main.content-empty {
+  padding: 0;
 }
 
 /* Fixes banner text width on mobile devices */
@@ -41,22 +36,6 @@
   #banner h1 {
     font-size: 2.5rem !important;
   }
-}
-
-/* Fixes form inputs not being styled properly */
-.wpcf7 form input[type="number"],
-.wpcf7 form input[type="date"],
-.wpcf7 form input[type="time"] {
-  border: 1px solid #eee;
-  padding: 0.5rem;
-  width: 100%;
-}
-
-.wpcf7 form select {
-  border: 1px solid #eee;
-  padding: 0.8rem 0.5rem;
-  width: 100%;
-  background-color: white;
 }
 
 /* Makes the sidebar sticky and scroll with the page */
@@ -222,4 +201,134 @@
 #breadcrumbs > span {
   display: flex;
   gap: 10px;
+}
+
+/* Better form elements */
+.wpcf7 {
+  background-color: #f9f9f9 !important;
+  border: none !important;
+  padding: 15px !important
+}
+
+.wpcf7 form {
+  margin: auto !important;
+  width: 100% !important;
+}
+
+.wpcf7 form * {
+  font-size: 18px !important;
+}
+
+.content-empty .wpcf7 form * {
+  font-size: 16px !important;
+}
+
+.wpcf7 form label {
+  font-weight: 700 !important;
+  margin-top: 0 !important;
+}
+
+.wpcf7 form input[type="number"],
+.wpcf7 form input[type="date"],
+.wpcf7 form input[type="tel"],
+.wpcf7 form input[type="url"],
+.wpcf7 form input[type="email"],
+.wpcf7 form input[type="text"],
+.wpcf7 form textarea,
+.wpcf7 form input[type="time"] {
+  border: 1px solid #ccc !important;
+  padding: 0.5rem !important;
+  width: 100% !important;
+  background: white !important;
+  border-radius: 3px;
+}
+
+.wpcf7 form select {
+  border: 1px solid #ccc;
+  padding: 0.8rem 0.5rem;
+  width: 100%;
+  background-color: white;
+}
+
+.wpcf7 form input[type="submit"] {
+  display: inline-flex !important;
+  margin: 0 !important;
+  padding: 12px 30px !important;
+  border-radius: 50px !important;
+  border: 1px solid !important;
+  line-height: 1.2em !important;
+  text-transform: uppercase !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  font-weight: 600 !important;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  color: #fff;
+  border-color: #0066b2 !important;
+  background-color: #0066b2 !important;
+  transform: translateY(-10px);
+}
+
+.wpcf7-form-control {
+  margin-top: 10px !important;
+}
+
+.wpcf7-list-item-label {
+  font-weight: normal !important;
+}
+
+.wpcf7 form input[type='checkbox'], input[type='radio'] {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  margin-right: 3px;
+  padding: 0;
+  border: 1px solid #ccc;
+  background: #fff;
+  outline: none;
+}
+
+.wpcf7 form input[type="file" i] {
+  border: 1px solid #ccc;
+}
+
+.wpcf7 form input[type='file']::-webkit-file-upload-button {
+  padding: 8px 15px;
+  border: none;
+  color: #fff;
+  background: #0066b2
+}
+
+.wpcf7-list-item {
+  margin: 0 !important;
+  display: block !important;
+}
+
+.wpcf7-list-item label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 0 !important;
+}
+
+.wpcf7-list-item-label {
+  margin-right: 10px !important;
+}
+
+.wpcf7 form input[type='radio'] {
+    border-radius: 50%;
+}
+
+.wpcf7-form-control.wpcf7-not-valid[aria-invalid="true"] {
+  border: 1px solid red !important;
+  -webkit-box-shadow: inset 0 0 0 1px red !important;
+  box-shadow: inset 0 0 0 1px red !important;
+}
+
+.wpcf7-not-valid-tip {
+  color: red !important;
+}
+
+/* Specific bugfix for CF7 forms on content only pages */
+.content-only .wpcf7, .content-empty .wpcf7 {
+  margin-bottom: 4.5rem !important;
 }
