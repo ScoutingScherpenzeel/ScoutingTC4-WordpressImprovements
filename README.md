@@ -1,5 +1,8 @@
-# Scouting TC4 - Verbeterd!
-Dit WordPress thema bevat verbeteringen voor het standaard Scouting Nederland Wordpress TC4 thema. De verbeteringen op dit moment zijn:
+
+<img width="1412" height="439" alt="1" src="https://github.com/user-attachments/assets/4f1604ad-7ff0-4b1a-bd51-00bd85b43e8d" />
+
+# Scouting TC4 Wordpress Template - Verbeterd!
+Dit WordPress thema bevat verbeteringen voor het standaard Scouting Nederland Wordpress TC4 thema. De verbeteringen zijn:
 * Opgeschoonde RSS feed (voor betere koppeling met Scouting App).
 * "Featured image" wordt toegevoegd aan RSS feed (voor betere koppeling met Scouting App).
 * Fallback "featured image" voor posts zonder plaatje.
