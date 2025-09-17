@@ -17,28 +17,27 @@ Het doel: een strakker, gebruiksvriendelijker en beter aansluitend thema voor sc
 
 ## ✨ Features
 
-- **Opgeschoonde RSS-feed** - stabieler voor koppelingen (zoals de Scouting App).
-- **Featured image in RSS** - zie een afbeelding voor koppelingen (zoals de Scouting App).
+- **Opgeschoonde RSS-feed** - Stabieler voor koppelingen (zoals de Scouting App).
+- **Featured image in RSS** - Zie een afbeelding voor koppelingen (zoals de Scouting App).
 - **Nieuw Laatste nieuws blok** - Gutenberg blok om de laatste nieuwsitems te zien.
 - **Nieuw Knop blok** - Gutenberg blok om je eigen knop te maken.
-- **Responsieve banners** - breken niet meer midden in woorden en schalen beter op mobiel.
-- **Betere formulier-styling** - alle velden (nummer, datum, select, input) zijn in lijn met Scouting Nederland.
-- **Sticky sidebar** - blijft netjes meescrollen op pagina’s.
-- **404 pagina** - verbeterde alignment.
-- **Afbeeldingen** - centreren werkt zoals verwacht.
-- **Knoppen & pijltjes** - correcte kleur en uitlijning.
+- **Responsieve banners** - Banner teksten breekt niet meer midden in woorden en schalen beter op mobiel.
+- **Betere formulier-styling** - Alle velden (nummer, datum, select, input) zijn in lijn met Scouting Nederland.
+- **Sticky sidebar** - Sidebar blijft netjes meescrollen op pagina’s.
+- **404 pagina** - Pagina heeft verbeterde alignment.
+- **Afbeeldingen** - Centreren werkt zoals verwacht.
+- **Knoppen & pijltjes** - Hebben correcte kleur en uitlijning.
 - **Extra page templates**
   - Alleen content (zonder navigatie/breadcrumbs).  
   - Full content (zonder header/footer).  
-- **Animaties** - vergelijkbaar met de officiële Scouting Nederland website
-- **Vlinder** - wordt nu onderaan de pagina getoond, consistent met scouting.nl
-- **Automatische updates** - altijd up-to-date vanuit GitHub.
-- **Verberg reCAPTCHA v3 badge** - wordt standaard verborgen.
-- **Downloadknop styling** - heeft nu de juiste stijl.
-- **Breadcrumbs** - styling in lijn met Scouting Nederland.
-- **Kompas afbeelding** - is nu hetzelfde als scouting.nl
-- **Featured items knop** - kun je daadwerkelijk een kleur geven.
-- **Automatische updates** - je blijft altijd up-to-date met dit thema!
+- **Animaties** - Zijn vergelijkbaar met de officiële Scouting Nederland website.
+- **Vlinder** - Wordt nu onderaan de pagina getoond, consistent met scouting.nl
+- **Automatische updates** - Altijd up-to-date vanuit GitHub.
+- **Verberg reCAPTCHA v3 badge** - Wordt standaard verborgen.
+- **Downloadknop styling** - Knop heeft nu de juiste stijl.
+- **Breadcrumbs** - Styling in lijn met Scouting Nederland.
+- **Kompas afbeelding** - Is nu hetzelfde als scouting.nl
+- **Featured items knop** - Kun je daadwerkelijk een kleur geven.
 
 ## 🚀 Installatie
 1. Download de laatste [release](https://github.com/ScoutingScherpenzeel/ScoutingTC4-WordpressImprovements/releases).  
