@@ -333,6 +333,15 @@
   color: red !important;
 }
 
+.wpcf7-form.submitting input[type="submit"] {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.wpcf7-spinner {
+  margin: 0;
+}
+
 /* Specific bugfix for CF7 forms on content only pages */
 .content-only .wpcf7, .content-empty .wpcf7 {
   margin-bottom: 4.5rem !important;
