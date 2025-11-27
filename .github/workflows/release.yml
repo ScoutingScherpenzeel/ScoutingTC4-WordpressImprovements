@@ -3,6 +3,7 @@ name: Create Archive
 on:
   release:
     types: [published]
+  pull_request:
 
 jobs:
   build:
@@ -39,7 +40,7 @@ jobs:
       - name: Archive Release
         uses: thedoctor0/zip-release@0.7.5
         with:
-          type: 'zip'
+          type: "zip"
           path: ${{ env.THEME_SLUG }}
           filename: ${{ env.THEME_SLUG }}-${{ github.ref_name }}.zip
           exclusions: |
@@ -47,8 +48,18 @@ jobs:
             **/.github*
             **/*.zip
 
+      # Only on PR
+      - name: Upload PR build artifact
+        if: github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.THEME_SLUG }}-${{ github.ref_name }}.zip
+          path: ${{ env.THEME_SLUG }}-${{ github.ref_name }}.zip
+
+      # Only on release
       - name: Upload Release Asset
+        if: github.event_name == 'release'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run:
-          'gh release upload "${{ github.ref_name }}" "${{ env.THEME_SLUG }}-${{ github.ref_name }}.zip" --clobber'
+        run: |
+          gh release upload "${{ github.ref_name }}" "${{ env.THEME_SLUG }}-${{ github.ref_name }}.zip" --clobber
