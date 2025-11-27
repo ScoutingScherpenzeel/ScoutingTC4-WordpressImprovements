@@ -45,5 +45,17 @@ function add_twig_file_exists_extension($twig)
 }
 add_filter('timber/twig', 'add_twig_file_exists_extension');
 
+// Use specific template for password protected posts/pages
+add_filter( 'template_include', 'get_password_protected_template', 99 );
+
+function get_password_protected_template( $template )
+{
+  global $post;
+  if ( !empty( $post ) && post_password_required( $post->ID ) ) {
+    $template = locate_template( ['password-protected.php'] ) ?: $template;
+  }
+  return $template;
+}
+
 require_once 'lib/acf.php';
 require_once 'lib/rss.php';
