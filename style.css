@@ -353,6 +353,6 @@
       display: none;
   }
   .gb-callout .callout {
-      margin-top: -320px;
+      margin-top: -320px !important;
   }
 }
