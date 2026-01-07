@@ -36,7 +36,7 @@ Het doel: een strakker, gebruiksvriendelijker en beter aansluitend thema voor sc
 - **Verberg reCAPTCHA v3 badge** - Wordt standaard verborgen.
 - **Downloadknop styling** - Knop heeft nu de juiste stijl.
 - **Breadcrumbs** - Styling in lijn met Scouting Nederland.
-- **Kompas afbeelding** - Is nu hetzelfde als scouting.nl
+- **Kompas afbeelding** - Is nu hetzelfde als scouting.nl en wordt verborgen op mobiele apparaten.
 - **Featured items knop** - Kun je daadwerkelijk een kleur geven.
 
 ## 🚀 Installatie
