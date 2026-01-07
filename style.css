@@ -346,3 +346,13 @@
 .content-only .wpcf7, .content-empty .wpcf7 {
   margin-bottom: 4.5rem !important;
 }
+
+/* Hide callout image on mobile devices */
+@media (max-width: 768px) {
+  .gb-callout .beeld {
+      display: none;
+  }
+  .gb-callout .callout {
+      margin-top: -320px;
+  }
+}
