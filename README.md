@@ -38,6 +38,7 @@ Het doel: een strakker, gebruiksvriendelijker en beter aansluitend thema voor sc
 - **Breadcrumbs** - Styling in lijn met Scouting Nederland.
 - **Kompas afbeelding** - Is nu hetzelfde als scouting.nl en wordt verborgen op mobiele apparaten.
 - **Featured items knop** - Kun je daadwerkelijk een kleur geven.
+- **Quirks modus fix** - Juist header om quirks mode te voorkomen.
 
 ## 🚀 Installatie
 1. Download de laatste [release](https://github.com/ScoutingScherpenzeel/ScoutingTC4-WordpressImprovements/releases).  
