@@ -45,5 +45,16 @@ function add_twig_file_exists_extension($twig)
 }
 add_filter('timber/twig', 'add_twig_file_exists_extension');
 
+// Disable WordPress URL guessing
+add_filter('do_redirect_guess_404_permalink', '__return_false');
+
+// Redirect 404 pages to homepage
+function redirect_404_to_homepage() {
+	if (is_404()) {
+		wp_redirect(home_url(), 301);
+		exit;
+	}
+}
+
 require_once 'lib/acf.php';
 require_once 'lib/rss.php';
