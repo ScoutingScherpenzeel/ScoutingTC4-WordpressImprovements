@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       THEME_SLUG: scouting-improvements-child
+      ARCHIVE_REF: ${{ github.event_name == 'pull_request' && format('pr-{0}', github.event.number) || github.ref_name }}
 
     steps:
       - name: Checkout repository
@@ -17,12 +18,14 @@ jobs:
 
         # Set version in style.css
       - name: Sync style.css Version with tag
+        if: github.event_name == 'release'
         run: |
           set -euo pipefail
           VERSION="${GITHUB_REF_NAME#v}"
+          ESCAPED_VERSION="$(printf '%s' "$VERSION" | sed 's/[\/&\\]/\\&/g')"
           FILE="style.css"
           if [ -f "$FILE" ]; then
-            sed -i -E "s/^[[:space:]]*\*?[[:space:]]*Version:[[:space:]]*.*/ * Version: ${VERSION}/" "$FILE"
+            sed -i -E "s/^[[:space:]]*\*?[[:space:]]*Version:[[:space:]]*.*/ * Version: ${ESCAPED_VERSION}/" "$FILE"
             echo "Updated version to ${VERSION}:"
             grep -n "Version:" "$FILE"
           else
@@ -42,7 +45,7 @@ jobs:
         with:
           type: "zip"
           path: ${{ env.THEME_SLUG }}
-          filename: ${{ env.THEME_SLUG }}-${{ github.ref_name }}.zip
+          filename: ${{ env.THEME_SLUG }}-${{ env.ARCHIVE_REF }}.zip
           exclusions: |
             **/.git*
             **/.github*
@@ -53,8 +56,8 @@ jobs:
         if: github.event_name == 'pull_request'
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ env.THEME_SLUG }}-${{ github.ref_name }}.zip
-          path: ${{ env.THEME_SLUG }}-${{ github.ref_name }}.zip
+          name: ${{ env.THEME_SLUG }}-${{ env.ARCHIVE_REF }}.zip
+          path: ${{ env.THEME_SLUG }}-${{ env.ARCHIVE_REF }}.zip
 
       # Only on release
       - name: Upload Release Asset
@@ -62,4 +65,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh release upload "${{ github.ref_name }}" "${{ env.THEME_SLUG }}-${{ github.ref_name }}.zip" --clobber
+          gh release upload "${{ github.ref_name }}" "${{ env.THEME_SLUG }}-${{ env.ARCHIVE_REF }}.zip" --clobber
