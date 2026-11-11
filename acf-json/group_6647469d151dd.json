@@ -55,6 +55,10 @@
       "choices": {
         "blauw": "Blauw",
         "groen": "Groen",
+        "geel": "Geel",
+        "rood": "Rood",
+        "oranje": "Oranje",
+        "paars": "Paars",
         "zwart": "Zwart"
       },
       "default_value": "blauw",
