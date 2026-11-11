@@ -101,7 +101,7 @@
   cursor: pointer;
   font-weight: 600;
   line-height: 1.2em;
-  margin: 0;
+  margin: 0 0 8px;
   padding: 12px 30px;
   text-align: center;
   text-decoration: none;
@@ -143,6 +143,22 @@
 .gb-btn-blauw,
 .wp-block-file__button {
   background: #0066b2;
+}
+
+.gb-btn-geel {
+  background: #fcdd17;
+}
+
+.gb-btn-rood {
+  background: #e1071a;
+}
+
+.gb-btn-oranje {
+  background: #f2940a;
+}
+
+.gb-btn-paars {
+  background: #921c7f;
 }
 
 .gb-btn-zwart {
