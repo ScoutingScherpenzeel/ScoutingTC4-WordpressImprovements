@@ -1,0 +1,177 @@
+{
+  "key": "group_5f3101f9e7a52",
+  "title": "Banner",
+  "fields": [
+    {
+      "key": "field_5f3101ffe7a7c",
+      "label": "Banner",
+      "name": "banner",
+      "aria-label": "",
+      "type": "group",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "layout": "table",
+      "sub_fields": [
+        {
+          "key": "field_5f34de15bbfbd",
+          "label": "Banner tonen",
+          "name": "banner_tonen",
+          "aria-label": "",
+          "type": "true_false",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "5",
+            "class": "",
+            "id": ""
+          },
+          "message": "",
+          "default_value": 0,
+          "ui": 0,
+          "ui_on_text": "",
+          "ui_off_text": ""
+        },
+        {
+          "key": "field_5f31020ee7a7d",
+          "label": "Achtergrondbeeld",
+          "name": "achtergrondbeeld",
+          "aria-label": "",
+          "type": "image",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": [
+            [
+              {
+                "field": "field_5f34de15bbfbd",
+                "operator": "==",
+                "value": "1"
+              }
+            ]
+          ],
+          "wrapper": {
+            "width": "20",
+            "class": "",
+            "id": ""
+          },
+          "return_format": "array",
+          "preview_size": "thumbnail",
+          "library": "all",
+          "min_width": "",
+          "min_height": "",
+          "min_size": "",
+          "max_width": "",
+          "max_height": "",
+          "max_size": "",
+          "mime_types": ""
+        },
+        {
+          "key": "field_5f310224e7a7e",
+          "label": "Kop",
+          "name": "kop",
+          "aria-label": "",
+          "type": "text",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": [
+            [
+              {
+                "field": "field_5f34de15bbfbd",
+                "operator": "==",
+                "value": "1"
+              }
+            ]
+          ],
+          "wrapper": {
+            "width": "30",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5f34dddfbbfbc",
+          "label": "Type",
+          "name": "type",
+          "aria-label": "",
+          "type": "radio",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": [
+            [
+              {
+                "field": "field_5f34de15bbfbd",
+                "operator": "==",
+                "value": "1"
+              }
+            ]
+          ],
+          "wrapper": {
+            "width": "15",
+            "class": "",
+            "id": ""
+          },
+          "choices": {
+            "hoog": "hoog",
+            "laag": "laag"
+          },
+          "allow_null": 0,
+          "other_choice": 0,
+          "default_value": "laag",
+          "layout": "horizontal",
+          "return_format": "value",
+          "save_other_choice": 0
+        }
+      ]
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "post_type",
+        "operator": "==",
+        "value": "page"
+      },
+      {
+        "param": "page_template",
+        "operator": "!=",
+        "value": "front-page.php"
+      }
+    ],
+    [
+      {
+        "param": "post_type",
+        "operator": "==",
+        "value": "post"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "acf_after_title",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": [
+    "excerpt",
+    "discussion",
+    "comments",
+    "revisions",
+    "author",
+    "format",
+    "send-trackbacks"
+  ],
+  "active": true,
+  "description": "",
+  "show_in_rest": 0,
+  "modified": 1743793749
+}

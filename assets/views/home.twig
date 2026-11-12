@@ -1,0 +1,21 @@
+{% extends 'base.twig' %}
+
+{% block content %}
+	<div class="container no-padding">
+		<div id="container-archive" class="archive">
+			<h1>Nieuws</h1>
+
+			{% if posts and posts|length > 0 %}
+				<div id="items-archive">
+					{% for bericht in posts %}
+						{% include 'partials/snippets/snippet-archive.twig' with { post: bericht } %}
+					{% endfor %}
+				</div>
+			{% else %}
+				<p>Er zijn op dit moment geen nieuwsberichten.</p>
+			{% endif %}
+		</div>
+
+		{% include 'partials/navigation/paging.twig' ignore missing %}
+	</div>
+{% endblock %}

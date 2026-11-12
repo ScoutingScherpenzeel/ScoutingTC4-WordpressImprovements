@@ -1,0 +1,7 @@
+<div id="sidebar">
+	{% if post.meta('sidebar_inhoud') %}
+		{{ post.meta('sidebar_inhoud')|raw }}
+	{% else %}
+		{% set widgets = function('dynamic_sidebar', 'sidebar-widgetarea') %}
+	{% endif %}
+</div>
