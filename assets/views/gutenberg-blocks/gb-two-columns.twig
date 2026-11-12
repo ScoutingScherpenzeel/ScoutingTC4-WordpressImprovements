@@ -1,0 +1,54 @@
+{#
+/**
+ * Block Name: Gutenberg Block - Two columns
+ *
+ * Template to display a Gutenberg block with two columns. Left: header image + title, a text area and a button. Right: header, WYSIWYG text and a button.
+ */
+#}
+
+{% if is_preview %}
+{% else %}
+{% endif %}
+
+{% set knop_headerbeeld = fields.kolom_headerbeeld.knop %}
+{% set knop_wysiwyg = fields.kolom_wysiwyg.knop %}
+
+<div class="container no-padding">
+	<div class="row no-gutters">
+		<div class="col">
+			<div id="gb-two-columns-{{ block.id }}" class="gb-two-columns">
+
+				<div class="col-headerimage">
+					<div class="beeld" style="background-image:url({{ fields.kolom_headerbeeld.beeld.url }});">
+						<h4>{{ fields.kolom_headerbeeld.kop }}</h4>
+					</div>
+					<div class="tekst">
+						{{ fields.kolom_headerbeeld.tekst }}
+					</div>
+					{% if knop_headerbeeld.url %}
+						<div class="knop">
+							<a class="gb-btn gb-btn-{{ knop_headerbeeld.kleur }}" href="{{ knop_headerbeeld.url.url }}">
+								{{ knop_headerbeeld.tekst }}
+							</a>
+						</div>
+					{% endif %}
+				</div>
+
+				<div class="col-wysiwyg">
+					<h4>{{ fields.kolom_wysiwyg.kop }}</h4>
+					<div class="content">
+						{{ fields.kolom_wysiwyg.tekst }}
+					</div>
+					{% if knop_wysiwyg.url %}
+						<div class="knop">
+							<a class="gb-btn gb-btn-{{ knop_wysiwyg.kleur }}" href="{{ knop_wysiwyg.url.url }}">
+								{{ knop_wysiwyg.tekst }}
+							</a>
+						</div>
+					{% endif %}
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,15 @@
+{% extends 'base.twig' %}
+
+{% block content %}
+	<div id="container-page" class="home">
+		<div class="item-beeld">
+			{% if post.thumbnail %}
+			    <img alt="" class="img-fluid" src="{{ post.thumbnail( 'large' ) }}" />
+			{% endif %}
+		</div>
+		<div id="item-content">
+			{{ post.content }}
+		</div>
+	</div>
+{% endblock %}
+

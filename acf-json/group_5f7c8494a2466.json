@@ -1,0 +1,173 @@
+{
+  "key": "group_5f7c8494a2466",
+  "title": "Slider",
+  "fields": [
+    {
+      "key": "field_5f7c8494a926c",
+      "label": "Slider",
+      "name": "slider",
+      "type": "group",
+      "layout": "row",
+      "sub_fields": [
+        {
+          "key": "field_5f7c8494ace65",
+          "label": "Slider tonen",
+          "name": "slider_tonen",
+          "type": "true_false",
+          "wrapper": {
+            "width": "5"
+          },
+          "default_value": 0
+        },
+        {
+          "key": "field_5f86e10811f5a",
+          "label": "Type",
+          "name": "type",
+          "type": "radio",
+          "wrapper": {
+            "width": "10"
+          },
+          "choices": {
+            "slider": "Slider",
+            "video_custom": "Video (eigen upload)"
+          },
+          "default_value": "slider",
+          "layout": "horizontal",
+          "return_format": "value"
+        },
+        {
+          "key": "field_5f7c84e5e87f9",
+          "label": "Slides",
+          "name": "slides",
+          "type": "repeater",
+          "conditional_logic": [
+            [
+              {
+                "field": "field_5f86e10811f5a",
+                "operator": "==",
+                "value": "slider"
+              }
+            ]
+          ],
+          "wrapper": {
+            "width": "85"
+          },
+          "layout": "table",
+          "button_label": "Slide toevoegen",
+          "sub_fields": [
+            {
+              "key": "field_5f7c8494ace6e",
+              "label": "Achtergrondbeeld",
+              "name": "achtergrondbeeld",
+              "type": "image",
+              "conditional_logic": [
+                [
+                  {
+                    "field": "field_5f7c8494ace65",
+                    "operator": "==",
+                    "value": "1"
+                  }
+                ]
+              ],
+              "wrapper": {
+                "width": "20"
+              },
+              "return_format": "array",
+              "preview_size": "thumbnail",
+              "library": "all"
+            },
+            {
+              "key": "field_5f7c8494ace73",
+              "label": "Kop",
+              "name": "kop",
+              "type": "text",
+              "conditional_logic": [
+                [
+                  {
+                    "field": "field_5f7c8494ace65",
+                    "operator": "==",
+                    "value": "1"
+                  }
+                ]
+              ],
+              "wrapper": {
+                "width": "30"
+              }
+            }
+          ]
+        },
+        {
+          "key": "field_5f86e16a11f5b",
+          "label": "Kop",
+          "name": "video_kop",
+          "type": "text",
+          "conditional_logic": [
+            [
+              {
+                "field": "field_5f86e10811f5a",
+                "operator": "==",
+                "value": "video_custom"
+              }
+            ]
+          ],
+          "wrapper": {
+            "width": "85"
+          }
+        },
+        {
+          "key": "field_5f86e1aa11f5c",
+          "label": "Video",
+          "name": "video_file",
+          "type": "file",
+          "instructions": "Upload een MP4-video",
+          "conditional_logic": [
+            [
+              {
+                "field": "field_5f86e10811f5a",
+                "operator": "==",
+                "value": "video_custom"
+              }
+            ]
+          ],
+          "wrapper": {
+            "width": "85"
+          },
+          "return_format": "url",
+          "library": "all",
+          "mime_types": "mp4"
+        }
+      ]
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "post_type",
+        "operator": "==",
+        "value": "page"
+      },
+      {
+        "param": "post_template",
+        "operator": "==",
+        "value": "front-page.php"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "acf_after_title",
+  "style": "default",
+  "label_placement": "left",
+  "instruction_placement": "label",
+  "hide_on_screen": [
+    "excerpt",
+    "discussion",
+    "comments",
+    "revisions",
+    "author",
+    "format",
+    "send-trackbacks"
+  ],
+  "active": true,
+  "description": "",
+  "show_in_rest": 0
+}
